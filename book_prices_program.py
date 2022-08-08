@@ -23,6 +23,8 @@ while True:
         if book_price > 0:
             # Appending the user input into the list with book prices
             list_with_book_prices.append(book_price)
+        elif book_price < 0:
+            print("You've entered invalid amount. Try again.")
         else:
             # Getting the books number by using len function
             books_number = len(list_with_book_prices)
@@ -57,7 +59,7 @@ while True:
             modified_book_prices.append("Equal Price")
     else:
         # Finally, printing the list with the appended values
-        print(modified_book_prices)
+        print(f"The final list with modified prices is: {modified_book_prices}")
         # Breaking of the while loop
         break
 
