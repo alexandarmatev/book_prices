@@ -66,11 +66,14 @@ while True:
             elif book_price == avg_price:
                 print(f"${book_price} is equal to the avg price")
                 mapped_book_prices[f"${book_price}"] = "equal to avg price"
+        # Checking for a valid user input and for not empty dictionary
         elif book_price <= 0 and not mapped_book_prices:
             print("There are no prices to compare. Try with entering a valid book price.")
+        # Breaking the while loop if the dictionary is not empty and the user has entered 0 or less
         elif book_price <= 0 and mapped_book_prices:
             print(f"The final dictionary with the prices is: {mapped_book_prices}")
             break
+    # Catching a ValueError error if the user's initial input is different from integer
     except ValueError:
         print("You've entered invalid amount. Try again.")
 
