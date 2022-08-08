@@ -69,10 +69,10 @@ while True:
     else:
         # If the list is empty
         if not mapped_book_prices:
-            print("There are no prices to show.")
+            print("There are no prices to show. Try with entering a book price.")
         # Finally, printing the list with the appended values
         else:
             print(f"The final dictionary with the prices is: {mapped_book_prices}")
             # Breaking of the while loop
             break
-        break
+
