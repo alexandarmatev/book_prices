@@ -16,7 +16,7 @@ def calculate_avg_price(prices_list):
     total_books = len(prices_list)
     sum_of_book_prices = sum(prices_list)
     avg_book_price = float("{:.2f}".format(sum_of_book_prices / total_books))
-    return avg_book_price
+    return avg_book_price, total_books
 
 
 # Empty list for storing of the book prices
@@ -33,10 +33,8 @@ while True:
         elif book_price < 0:
             print("You've entered invalid amount. Try again.")
         else:
-            # Getting the books number by using len function
-            books_number = len(list_with_book_prices)
-            # Storing the output of the avg price function into variable
-            avg_price = calculate_avg_price(list_with_book_prices)
+            # Storing the outputs of the avg price function into variable
+            avg_price, books_number = calculate_avg_price(list_with_book_prices)
             # Printing the book count and the avg book price
             print(f"Book count is: {books_number}\n"
                   f"The average book price is: ${avg_price}")
