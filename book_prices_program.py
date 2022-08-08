@@ -1,3 +1,10 @@
+# Importing the logo for the program
+from logo import logo
+
+# Printing the logo for the program
+print(logo)
+
+
 # Function for getting of the book price
 def get_book_price():
     price_input = float(input("Enter a book price: $"))
@@ -38,8 +45,8 @@ while True:
     except ZeroDivisionError:
         print("You've entered invalid amount. Try again.")
 
-# Creating an empty list which will store the modified book prices
-modified_book_prices = []
+# Creating an empty dictionary which will map the book prices
+mapped_book_prices = {}
 # While loop until the input of the user is either 0 or less
 while True:
     # Getting the book price by using the get book price function
@@ -48,18 +55,24 @@ while True:
         # Printing the appropriate message if the price is above the avg
         if book_price > avg_price:
             print(f"${book_price} is above the avg price")
-            modified_book_prices.append("Above Price")
+            mapped_book_prices[book_price] = "above price"
         # Printing the appropriate message if the price is below the avg
         elif book_price < avg_price:
             print(f"${book_price} is below the avg price")
-            modified_book_prices.append("Below Price")
+            mapped_book_prices[book_price] = "below price"
         # Printing the appropriate message if the price is equal to the avg
         elif book_price == avg_price:
             print(f"${book_price} is equal to the avg price")
-            modified_book_prices.append("Equal Price")
+            mapped_book_prices[book_price] = "equal price"
+    elif book_price < 0:
+        print("You've entered invalid amount. Try again.")
     else:
+        # If the list is empty
+        if not mapped_book_prices:
+            print("There are no prices to show.")
         # Finally, printing the list with the appended values
-        print(f"The final list with modified prices is: {modified_book_prices}")
-        # Breaking of the while loop
+        else:
+            print(f"The final dictionary with the prices is: {mapped_book_prices}")
+            # Breaking of the while loop
+            break
         break
-
