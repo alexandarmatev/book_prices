@@ -1,6 +1,7 @@
 # Importing the logo for the program
 from logo import logo
 
+
 # Printing the logo of the program
 print(logo)
 
@@ -40,9 +41,6 @@ while True:
                   f"The average book price is: ${avg_price}")
             # Breaking of the while loop
             break
-    # Catching a ZeroDivisionError error if the user's initial input is 0
-    except ZeroDivisionError:
-        print("You've entered invalid amount. Try again.")
     # Catching a ValueError error if the user's initial input is different from integer
     except ValueError:
         print("You've entered invalid amount. Try again.")
@@ -78,4 +76,3 @@ while True:
     # Catching a ValueError error if the user's initial input is different from integer
     except ValueError:
         print("You've entered invalid amount. Try again.")
-
