@@ -1,7 +1,7 @@
 # Importing the logo for the program
 from logo import logo
 
-# Printing the logo for the program
+# Printing the logo of the program
 print(logo)
 
 
@@ -11,7 +11,7 @@ def get_book_price():
     return price_input
 
 
-# Function for calculating the avg book price
+# Function for calculating the avg book price and total books count
 def calculate_avg_price(prices_list):
     total_books = len(prices_list)
     sum_of_book_prices = sum(prices_list)
@@ -30,7 +30,7 @@ while True:
             # Appending the user input into the list with book prices
             list_with_book_prices.append(book_price)
         elif book_price <= 0 and not list_with_book_prices:
-            print("You've entered invalid amount. Try again.")
+            print("There is no valid initial price provided. Try with entering a valid book price.")
         elif book_price <= 0 and list_with_book_prices:
             # Storing the outputs of the avg price function into variable
             avg_price, books_number = calculate_avg_price(list_with_book_prices)
