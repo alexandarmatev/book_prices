@@ -29,6 +29,7 @@ while True:
         if book_price > 0:
             # Appending the user input into the list with book prices
             list_with_book_prices.append(book_price)
+            print(f"${book_price} was added to the list.")
         elif book_price <= 0 and not list_with_book_prices:
             print("There is no valid initial price provided. Try with entering a valid book price.")
         elif book_price <= 0 and list_with_book_prices:
@@ -52,6 +53,7 @@ mapped_book_prices = {}
 while True:
     try:
         # Getting the book price by using the get book price function
+        print("Let's continue with comparing of the book prices.")
         book_price = get_book_price()
         if book_price > 0:
             # Printing the appropriate message if the price is above the avg
